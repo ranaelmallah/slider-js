@@ -1,0 +1,99 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: rgb(199, 233, 252);
+}
+
+.imgesContainer {
+    margin: 10px auto;
+    height: 250px;
+    width: 700px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.imgesContainer img {
+    position: absolute;
+    width: 700px;
+    height: 250px;
+    border-radius: 4px;
+    transition: opacity 1s;
+    opacity: 0;
+    z-index: 1;
+}
+
+.imgesContainer img.active {
+    opacity: 1;
+}
+
+#slide-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.425);
+    color: white;
+    z-index: 2;
+    border-radius: 4px;
+    padding: 2px 4px;
+}
+
+.controlers {
+    width: 700px;
+    margin: auto;
+}
+
+.next,
+.pre{
+    background-color: rgb(112, 179, 223);
+    padding: 5px 10px;
+    border: none;
+    width: 20%;
+    text-align: center;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+.next.disabled,
+.pre.disabled {
+    background-color: rgb(186, 216, 239);
+    cursor: no-drop;
+}
+
+.numbers {
+    width: 60%;
+    float: left;
+}
+
+.next {
+    float: right;
+}
+
+.pre {
+    float: left;
+}
+
+.numbers ul {
+    text-align: center;
+}
+
+.numbers ul li {
+    display: inline-block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: rgb(207, 195, 211);
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    margin: 0px 4px;
+    padding: 4px;
+}
+
+.numbers ul li.act {
+    background-color: rgb(112, 179, 223);
+    color: white;
+}
